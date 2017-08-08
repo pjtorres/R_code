@@ -28,5 +28,6 @@ panel.cor <- function(x, y, digits=2, prefix="", cex.cor, ...)
     if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)
     text(0.5, 0.5, txt, cex = 1)
 }
-pairs(iris[1:4], lower.panel=panel.smooth, cex = .8, pch = 21, bg="steelblue",
-       diag.panel=panel.hist, cex.labels = 1.2, font.labels=2, upper.panel=panel.cor)
+# below is test code
+#pairs(iris[1:4], lower.panel=panel.smooth, cex = .8, pch = 21, bg="steelblue",
+  #     diag.panel=panel.hist, cex.labels = 1.2, font.labels=2, upper.panel=panel.cor)
