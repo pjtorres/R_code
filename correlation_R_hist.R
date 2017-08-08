@@ -1,5 +1,5 @@
-# Great way to combine the pairs(),cor(), and hist() functions into one great graph. NOT MY CODE THIS IS TAKEN FROM ane handles man 
-#AS SEEN IN THIS BLOG https://www.blogger.com/profile/07863739093681446569
+# Great way to combine the pairs(),cor(), and hist() functions into one great graph. THIS IS NOT MY CODE THIS IS TAKEN FROM ane handles man 
+#AS SEEN IN THIS BLOG https://www.blogger.com/profile/07863739093681446569 and http://handlesman.blogspot.com/2011/03/matrix-plot-with-confidence-intervals.html
 
 ## put histograms on the diagonal
 panel.hist <- function(x, ...)
