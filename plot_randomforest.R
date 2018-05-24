@@ -1,3 +1,5 @@
+library(randomForest)
+library(knitr)
 #'Plot randomforest
 #'
 #' @author Pedro J. Torres \email{pjtorres88@gmail.com}
@@ -32,7 +34,9 @@ plot_randomforest=function(physeq, grouping_column,Color,Facet){
     #filter out any taxa with a zero or in very low abudnace and prep for random forest, will not make training set here
     physeq_0_filtered <- prune_taxa(taxa_sums(physeq) > 0,physeq)
     physeq_10_filtered <- prune_taxa(taxa_sums(physeq_0_filtered)>5,physeq_0_filtered)
-    predictors <- t(otu_table(physeq_10_filtered))
+    #predictors <- t(otu_table(physeq_10_filtered))
+    predictors <- otu_table(physeq_10_filtered)
+
     physeq_10_filtered_sample_Data <- data.frame(sample_data(physeq_10_filtered))
     physeq_10_filtered_sample_Data$Groups <- physeq_10_filtered_sample_Data[,grouping_column]
     response <- as.factor(physeq_10_filtered_sample_Data$Groups)
@@ -88,5 +92,7 @@ plot_randomforest=function(physeq, grouping_column,Color,Facet){
        scale_y_log10()+theme(axis.text.x = element_text(angle = 90, hjust = 1))
     
     print (prf)
-
+                                                 
+# if this command does not work then got to line 37 and remove the '#' and add that to line 38
+# aka do not transform
 }
