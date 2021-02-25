@@ -1,6 +1,7 @@
 # this will be used after you train your dataset. Example from our PARTIE paper is below.
 #Your model, 'final_model.rds', for PARTIE_Classification.R should be in the same folder as this R script
 
+#checking certain thngs
 
 library(base)
 
